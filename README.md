@@ -1,6 +1,7 @@
 # Site de présentation des treks sur du territoire
 
 ## Stack
+
 - [Nuxt 3](https://nuxtjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Pinia](https://pinia.esm.dev/)
@@ -14,26 +15,37 @@
 - [Motion](https://motion.vueuse.org/)
 
 ## Source code
+
 ```
 git clone https://github.com/geoffreygirou/trek.gouv.fr.git
 ```
+
 ## Setup
+
 ```
 npm install
 ```
+
 ## Lint and fix
+
 ```
 npm run lintfix
 ```
+
 ## Test
+
 ```
 npm run test
 ```
+
 ## Development
+
 ```
 npm run dev
 ```
+
 ## Production
+
 ```
 npm run build
 ```
