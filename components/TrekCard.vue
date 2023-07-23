@@ -1,26 +1,26 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    title: string;
-    subtitle: string;
-    description: string;
-    link: string;
-    imagePath: string;
+    title: string
+    subtitle: string
+    description: string
+    link: string
+    imagePath: string
   }>(),
   {
-    title: "Trek",
-    subtitle: "Best trek ever",
-    description: "2 KM",
-    link: "2 DAYS",
-    imagePath: "/assets/img/treks/trek.png",
+    title: 'Trek',
+    subtitle: 'Best trek ever',
+    description: '2 KM',
+    link: '2 DAYS',
+    imagePath: '/assets/img/treks/trek.png',
   },
-);
+)
 
 const descriptionSm: string = computed(() => {
   return props.description.length > 100
-    ? props.description.substring(0, 100) + "..."
-    : props.description;
-});
+    ? props.description.substring(0, 100) + '...'
+    : props.description
+})
 </script>
 <template>
   <div class="fr-col-12 fr-col-md-3 fr-mb-2w">

@@ -5,8 +5,8 @@ const navItems = [
     text: 'Accueil',
   },
   {
-    to: { name: "Treks" },
-    text: "Treks",
+    to: { name: 'Treks' },
+    text: 'Treks',
   },
 ]
 </script>

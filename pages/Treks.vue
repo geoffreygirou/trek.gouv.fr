@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useTreksStore } from "~/stores/treks";
+import { useTreksStore } from '~/stores/treks'
 
-const store = useTreksStore();
+const store = useTreksStore()
 </script>
 <template>
   <DsfrLayout>

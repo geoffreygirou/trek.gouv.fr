@@ -30,86 +30,86 @@
 </template>
 
 <script setup lang="ts">
-import { animate, timeline } from "motion";
+import { animate, timeline } from 'motion'
 
-const trekRef = ref();
+const trekRef = ref()
 
-const timeout = 5000;
-const rotationInterval = ref(null);
+const timeout = 5000
+const rotationInterval = ref(null)
 const treks = ref([
   {
-    slug: "cerces",
-    name: "Le Tour des Cerces",
+    slug: 'cerces',
+    name: 'Le Tour des Cerces',
     active: true,
   },
   {
-    slug: "vercors",
-    name: "La traversée du Vercors",
+    slug: 'vercors',
+    name: 'La traversée du Vercors',
     active: false,
   },
   {
-    slug: "paradis-vanoise",
-    name: "Grand Paradis Vanoise",
+    slug: 'paradis-vanoise',
+    name: 'Grand Paradis Vanoise',
     active: false,
   },
   {
-    slug: "massif-bauges",
-    name: "La traversée du Massif des Bauges",
+    slug: 'massif-bauges',
+    name: 'La traversée du Massif des Bauges',
     active: false,
   },
   {
-    slug: "haute-route",
-    name: "La Haute Route",
+    slug: 'haute-route',
+    name: 'La Haute Route',
     active: false,
   },
-]);
+])
 
 const activeTreks = computed(() => {
-  return treks.value.filter((b) => b.active);
-});
+  return treks.value.filter((b) => b.active)
+})
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function enterTransition(el, done = () => {}) {
   timeline([
-    [el, { opacity: 0, scale: 0.5, filter: "blur(20px)" }, { duration: 0 }],
+    [el, { opacity: 0, scale: 0.5, filter: 'blur(20px)' }, { duration: 0 }],
     [
       el,
-      { opacity: 1, scale: 1, filter: "blur(0px)" },
-      { duration: 0.5, easing: "ease-in-out" },
+      { opacity: 1, scale: 1, filter: 'blur(0px)' },
+      { duration: 0.5, easing: 'ease-in-out' },
     ],
-  ]);
+  ])
 }
 
 function leaveTransition(el, done) {
   animate(
     el,
-    { opacity: 0, scale: 0.5, filter: "blur(20px)" },
-    { duration: 0.5, easing: "ease-in-out" },
-  );
+    { opacity: 0, scale: 0.5, filter: 'blur(20px)' },
+    { duration: 0.5, easing: 'ease-in-out' },
+  )
   // TODO: complete event
   setTimeout(() => {
-    done();
-  }, 500);
+    done()
+  }, 500)
 }
 
 function rotateTreks() {
-  let currentEl = 0;
-  let el = treks.value[currentEl];
+  let currentEl = 0
+  let el = treks.value[currentEl]
 
   rotationInterval.value = setInterval(() => {
     if (document.hidden) {
-      return;
+      return
     }
-    el.active = false;
-    currentEl = (currentEl + 1) % treks.value.length;
+    el.active = false
+    currentEl = (currentEl + 1) % treks.value.length
 
-    el = treks.value[currentEl];
-    el.active = true;
-  }, timeout);
+    el = treks.value[currentEl]
+    el.active = true
+  }, timeout)
 }
 
 onMounted(() => {
-  rotateTreks();
-  setTimeout(() => enterTransition(trekRef.value), 100);
-});
+  rotateTreks()
+  setTimeout(() => enterTransition(trekRef.value), 100)
+})
 </script>
