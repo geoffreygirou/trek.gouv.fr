@@ -1,3 +1,5 @@
 <template>
-  <DsfrLayout> </DsfrLayout>
+  <DsfrLayout>
+    <HeroTrekSection />
+  </DsfrLayout>
 </template>
