@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt'],
+  modules: ['@nuxtjs/tailwindcss','@pinia/nuxt'],
   css: ['@gouvfr/dsfr/dist/dsfr.min.css', '@gouvminint/vue-dsfr/styles'],
   components: [
     {

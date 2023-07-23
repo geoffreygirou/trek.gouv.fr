@@ -11,7 +11,10 @@ const store = useTreksStore();
     >
       Les plus beaux treks de France
     </h1>
-    <p class="max-w-2xl mb-12 text-center text-grey-700">
+    <h2 class="inline-flex flex-col items-center text-center w-full -z-1">
+      <HeroTrekNameRotator />
+    </h2>
+    <p class="max-w-2xl mt-12 mb-12 text-center text-grey-700">
       Découvrez les parcours de Trek sur le territoire. Explorez les joyaux de
       vos régions.
     </p>
