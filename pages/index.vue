@@ -1,0 +1,3 @@
+<template>
+  <DsfrLayout> </DsfrLayout>
+</template>
