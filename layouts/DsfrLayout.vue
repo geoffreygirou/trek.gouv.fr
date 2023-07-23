@@ -4,6 +4,10 @@ const navItems = [
     to: { name: 'index' },
     text: 'Accueil',
   },
+  {
+    to: { name: "Treks" },
+    text: "Treks",
+  },
 ]
 </script>
 
