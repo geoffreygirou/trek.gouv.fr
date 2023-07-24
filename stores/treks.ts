@@ -1,3 +1,4 @@
+import { defineStore } from 'pinia'
 interface Trek {
   slug: string
   name: string

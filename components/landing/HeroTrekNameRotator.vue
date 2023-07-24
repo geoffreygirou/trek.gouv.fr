@@ -30,39 +30,18 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted } from 'vue'
 import { animate, timeline } from 'motion'
+import { useTreksStore } from '~/stores/treks'
 
 const trekRef = ref()
 
 const timeout = 5000
 const rotationInterval = ref(null)
-const treks = ref([
-  {
-    slug: 'cerces',
-    name: 'Le Tour des Cerces',
-    active: true,
-  },
-  {
-    slug: 'vercors',
-    name: 'La traversée du Vercors',
-    active: false,
-  },
-  {
-    slug: 'paradis-vanoise',
-    name: 'Grand Paradis Vanoise',
-    active: false,
-  },
-  {
-    slug: 'massif-bauges',
-    name: 'La traversée du Massif des Bauges',
-    active: false,
-  },
-  {
-    slug: 'haute-route',
-    name: 'La Haute Route',
-    active: false,
-  },
-])
+
+// Use the treks store instead of a local variable
+const store = useTreksStore()
+const treks = computed(() => store.trekList)
 
 const activeTreks = computed(() => {
   return treks.value.filter((b) => b.active)
