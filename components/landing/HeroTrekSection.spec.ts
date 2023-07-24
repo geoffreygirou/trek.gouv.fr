@@ -4,7 +4,7 @@ import HeroTrekSection from '@/components/landing/HeroTrekSection.vue'
 import { useTreksStore } from '@/stores/treks'
 
 describe('HeroTrekSection.vue', () => {
-  const wrapper: any
+  let wrapper: any
   // Create a new Pinia instance
   const pinia = createPinia()
 
