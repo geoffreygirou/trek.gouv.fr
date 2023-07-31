@@ -1,40 +1,27 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-const props = withDefaults(
-  defineProps<{
-    title: string
-    subtitle: string
-    description: string
-    link: string
-    imagePath: string
-  }>(),
-  {
-    title: 'Trek',
-    subtitle: 'Best trek ever',
-    description: '2 KM',
-    link: '2 DAYS',
-    imagePath: '/assets/img/treks/trek.png',
-  },
-)
+import { descriptionSm } from '@/utils/string'
+const props = defineProps<{
+  title: string
+  subtitle: string
+  description: string
+  link: string
+  imagePath: string
+}>()
 
-const descriptionSm: string = computed(() => {
-  return props.description.length > 100
-    ? props.description.substring(0, 100) + '...'
-    : props.description
-})
+const description = descriptionSm(props.description)
 </script>
 <template>
   <div class="fr-col-12 fr-col-md-3 fr-mb-2w">
     <div class="fr-card fr-card--grey fr-enlarge-link">
       <div class="fr-card__body">
         <h3 class="fr-card__title">
-          <a class="fr-card__link" :href="link">{{ title }}</a>
+          <RouterLink :to="link" class="fr-card__link">{{ title }}</RouterLink>
         </h3>
         <p class="fr-card__detail">
           {{ subtitle }}
         </p>
         <p class="fr-card__desc">
-          {{ descriptionSm }}
+          {{ description }}
         </p>
       </div>
       <div class="fr-card__img">

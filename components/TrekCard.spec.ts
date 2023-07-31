@@ -27,7 +27,12 @@ describe('TrekCard.vue', () => {
     )
   })
 
-  it('computes descriptionSm correctly', () => {
-    expect(wrapper.vm.descriptionSm.length).toBeLessThan(101)
+  it('computes small description correctly', () => {
+    expect(wrapper.find('.fr-card__desc').text().length).toBeLessThan(101)
   })
+
+  // it('emits correct event when button is clicked', async () => {
+  //   await wrapper.find('button').trigger('click')
+  //   expect(wrapper.emitted()).toHaveProperty('view')
+  // })
 })

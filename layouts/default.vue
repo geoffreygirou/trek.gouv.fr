@@ -15,11 +15,15 @@ const navItems = [
   <div>
     <DsfrHeader :service-title="`trek.gouv.fr`" />
     <div class="fr-container">
-      <DsfrNavigation :nav-items="navItems" />
+      <DsfrNavigation class="fr-mb-2w" :nav-items="navItems" />
       <slot />
     </div>
     <DsfrFooter />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fr-container {
+  min-height: 100vh;
+}
+</style>

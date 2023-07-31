@@ -1,7 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
+  typescript: {
+    strict: true,
+  },
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-vitest'],
   css: ['@gouvfr/dsfr/dist/dsfr.min.css', '@gouvminint/vue-dsfr/styles'],
   components: [
     {
@@ -21,5 +25,10 @@ export default defineNuxtConfig({
       'defineStore', // import { defineStore } from 'pinia'
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
+  },
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: '',
+    },
   },
 })
