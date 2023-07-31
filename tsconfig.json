@@ -1,8 +1,12 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    // Other options...
-    "types": ["jest" /* Other type libraries... */]
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "outDir": "dist",
+    "types": ["jest"],
+    "lib": ["esnext", "dom"]
   }
 }
