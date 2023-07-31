@@ -9,7 +9,7 @@ module.exports = {
     'plugin:nuxt/recommended',
     'prettier',
   ],
-  plugins: ['jest', 'vitest'],
+  plugins: ['jest'],
   // add your custom rules here
   rules: {
     'prefer-const': 'off',
