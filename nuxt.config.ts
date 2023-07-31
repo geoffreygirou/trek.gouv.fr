@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-vitest'],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
   css: ['@gouvfr/dsfr/dist/dsfr.min.css', '@gouvminint/vue-dsfr/styles'],
   components: [
     {
