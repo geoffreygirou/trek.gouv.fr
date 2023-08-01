@@ -31,8 +31,9 @@ describe('TrekCard.vue', () => {
     expect(wrapper.find('.fr-card__desc').text().length).toBeLessThan(101)
   })
 
-  // it('emits correct event when button is clicked', async () => {
-  //   await wrapper.find('button').trigger('click')
-  //   expect(wrapper.emitted()).toHaveProperty('view')
+  // test('triggers a click', async () => {
+  //   await wrapper.trigger('click')
+  //   expect(mockRouter.push).toHaveBeenCalledTimes(1)
+  //   expect(mockRouter.push).toHaveBeenCalledWith('/treks/1')
   // })
 })

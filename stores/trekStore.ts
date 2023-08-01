@@ -23,6 +23,9 @@ export const useTreksStore = defineStore('treks', () => {
   const countTreks = computed(() => trekList.value.length)
 
   async function fetchTreks() {
+    if (trekList.value.length > 0) {
+      return trekList.value
+    }
     await getTreks().then((apiTreks) => {
       trekList.value = apiTreks
     })
@@ -48,7 +51,7 @@ export const useTreksStore = defineStore('treks', () => {
   }
 })
 
-/* OPTION 
+/* OPTION WITH SETUP
 import { Trek, TreksState } from '@/types/treks'
 
 export const useTreksStore = defineStore('treks', {

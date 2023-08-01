@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
 import { UiError } from '@/types/error'
-// OPTION + clear
+// OPTION + setup + clear
 export const useErrorStore = defineStore('error', {
   state: () => ({
-    message: '',
     title: '',
+    message: '',
     subtitle: '',
     description: '',
     help: '',

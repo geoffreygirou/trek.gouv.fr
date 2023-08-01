@@ -1,4 +1,4 @@
-import { useTrekApi } from '../trekApi'
+import { useTrekApi } from '@/composables/api/trekApi'
 import { ApiTrek } from '@/types/treks'
 
 export const getTreks = async (): Promise<ApiTrek[]> => {

@@ -5,5 +5,5 @@ const store = useTreksStore()
 store.fetchTreks()
 </script>
 <template>
-  <HeroTrekSection />
+  <HeroTrekSection :count-treks="store.countTreks" />
 </template>
