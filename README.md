@@ -1,5 +1,7 @@
 # Site de présentation des treks sur du territoire
 
+Frontend exploitant l'API : [trek-api](https://github.com/geoffreygirou/trek-api)
+
 ## Stack
 
 - [Nuxt 3](https://nuxtjs.org/)
@@ -44,8 +46,6 @@ npm run test
 npm run dev
 ```
 
-## Production
+## SSL
 
-```
-npm run build
-```
+[trek-api](https://github.com/geoffreygirou/trek-api) certificate is self-signed, so you need to trust it, otherwise you will be displayed a beautiful error page.

@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { useTreksStore } from '@/stores/trekStore'
-
-const store = useTreksStore()
+defineProps({
+  countTreks: {
+    type: Number,
+    default: 0,
+  },
+})
 </script>
 <template>
   <section id="hero-trek" class="fr-col-md-12 text-center">
@@ -12,7 +15,7 @@ const store = useTreksStore()
     </p>
 
     <DsfrButton @click="$router.push('/treks')">
-      <span class="trek-count"> Voir les Treks ({{ store.countTreks }})</span>
+      <span class="trek-count"> Voir les Treks ({{ countTreks }})</span>
     </DsfrButton>
     <DsfrPicture
       size="small"

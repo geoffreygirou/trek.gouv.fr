@@ -7,25 +7,6 @@ definePageMeta({
 const store = useErrorStore()
 const router = useRouter()
 
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  subtitle: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  help: {
-    type: String,
-    required: true,
-  },
-})
-
 if (!store.hasError) {
   router.push('/')
 }
