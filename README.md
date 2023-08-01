@@ -49,4 +49,3 @@ npm run dev
 ## SSL
 
 [trek-api](https://github.com/geoffreygirou/trek-api) certificate is self-signed, so you need to trust it, otherwise you will be displayed a beautiful error page.
-
